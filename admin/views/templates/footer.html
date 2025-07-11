@@ -3,9 +3,13 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+            <span>Copyright &copy; GO Blog <span id="year"></span></span>
         </div>
     </div>
 </footer>
+<script>
+    const year = new Date();
+    document.getElementById("year").innerText = year.getFullYear();
+</script>
 <!-- End of Footer -->
 {{end}}

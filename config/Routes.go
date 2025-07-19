@@ -10,7 +10,9 @@ import (
 func Routes() *httprouter.Router {
 	r := httprouter.New()
 	//tit ADMIN
+	//blog posts
 	r.GET("/admin", admin.Dashboard{}.Index)
+	r.GET("/admin/yeni-ekle", admin.Dashboard{}.NewItem)
 
 	//tit SERVE FILES
 	r.ServeFiles("/admin/assets/*filepath", http.Dir("admin/assets"))

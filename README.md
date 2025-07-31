@@ -26,15 +26,15 @@ Bu proje, [bu eğitim serisi](https://www.youtube.com/playlist?list=PLs98OhOT86f
 
 ## 🖥️ Kurulum ve Çalıştırma
 
-1. Repoyu Klonla:
-- git clone https://github.com/htnylmz1283/goblog.git
-- cd goblog
-2. Modülleri indir:
--go mod tidy
-3. Projeyi başlat:
-- go run main.go
-4. Tarayıcıda aç:
-- http://localhost:8080/admin
+- Repoyu Klonla:
+  - git clone https://github.com/htnylmz1283/goblog.git
+  - cd goblog
+- Modülleri indir:
+  -go mod tidy
+- Projeyi başlat:
+  - go run main.go
+- Tarayıcıda aç:
+  - http://localhost:8080/admin
 
 ## 🙏 Teşekkür
 

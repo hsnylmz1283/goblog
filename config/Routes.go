@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	admin "github.com/hsnylmz1283/goblog/admin/controllers"
+	site "github.com/hsnylmz1283/goblog/site/controllers"
 	"github.com/julienschmidt/httprouter"
 )
 
@@ -28,8 +29,14 @@ func Routes() *httprouter.Router {
 	r.POST("/admin/do_login/", admin.Userops{}.Login)
 	r.GET("/admin/logout", admin.Userops{}.Logout)
 
+	//SITE
+	//Homepage
+	r.GET("/", site.Homepage{}.Index)
+	r.GET("/yazilar/:slug", site.Homepage{}.Detail)
+
 	//tit SERVE FILES
 	r.ServeFiles("/admin/assets/*filepath", http.Dir("admin/assets"))
+	r.ServeFiles("/assets/*filepath", http.Dir("site/assets"))
 	r.ServeFiles("/uploads/*filepath", http.Dir("uploads"))
 	return r
 }
